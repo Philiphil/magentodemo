@@ -1,0 +1,48 @@
+<div class="clider">
+<?php
+    $urls = $this->getImages();
+    $i = 0;
+    foreach ($urls as $key) {
+        $class = "invisible";
+        if($i>0)$class.=" effet";
+        $u=$key->getUrl();
+        echo "<img src='$u' alt='slider' i='$i' class='$class'>";
+        $i++;
+    }
+?>
+</div>
+<style>
+    .invisible{
+        display:none;
+    }
+    .effet{
+        filter: hue-rotate(180deg);
+    }
+</style>
+
+<script>
+    var c = document.querySelectorAll("div.clider")
+    c.forEach( function(e,i,a){
+        e.setAttribute("index",0)
+        let f = e.querySelector("img:first-child")
+        f.classList.toggle("invisible")
+        setInterval(slide,1200,e)
+    });
+
+    function slide(clider){
+        let n = clider.getAttribute("index");
+        let bfr;
+
+        clider.querySelectorAll("img").forEach(function(e,i,a){
+            if(i==0)bfr=e;
+            if(i==n+1)bfr=e
+        })
+
+        let c = clider.querySelector("img[i='"+n+"']")
+        c.classList.toggle("invisible")
+
+        bfr.classList.toggle("invisible")
+        clider.setAttribute("index",bfr.getAttribute("i"));
+        
+    }
+</script>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.1.0">
+    <sample_contact_index_index>
+        <reference name="content">
+            <block type="core/template" name="contact_form" template="sample_contact/form.phtml" />
+        </reference>
+    </sample_contact_index_index>
+    <sample_contact_index_confirm>
+        <reference name="content">
+            <block type="core/template" name="contact_success" template="sample_contact/confirm.phtml" />
+        </reference>
+    </sample_contact_index_confirm>
+    
+    <sample_contact_index_index>
+        <reference name="content">
+            <block type="sample_contact/schedule" template="sample_contact/schedule.phtml" 
+            name="sample.schedule" />
+        </reference>
+    </sample_contact_index_index>
+
+        
+    <sample_contact_index_index>
+        <reference name="right">
+            <block type="sample_contact/clider" template="sample_contact/clider.phtml" 
+            name="sample.clider" />
+        </reference>
+    </sample_contact_index_index>
+
+</layout>

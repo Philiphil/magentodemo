@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <contact_tab translate="label">
+            <label>Truc</label>
+            <sort_order>100</sort_order>
+        </contact_tab>
+    </tabs>
+    <sections>
+        <contact_section translate="label">
+            <label>Truc</label>
+            <sort_order>100</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <tab>contact_tab</tab>
+            <groups>
+                <contact_group translate="label">
+                    <label>Groupe Contact</label>
+                    <comment>Config COntact</comment>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <contact_field>
+                            <label>admin mail</label>
+                            <comment>mail admin</comment>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_input>text</frontend_input>
+                        </contact_field>
+                    </fields>
+                </contact_group>
+            </groups>
+        </contact_section>
+    </sections>
+</config>

@@ -1,0 +1,8 @@
+2018-10-09T14:30:47+00:00 DEBUG (7): HEADERS ALREADY SENT: \<pre>[0] /var/www/html/magentecna/app/code/core/Mage/Core/Controller/Response/Http.php:52
+[1] /var/www/html/magentecna/lib/Zend/Controller/Response/Abstract.php:768
+[2] /var/www/html/magentecna/app/code/core/Mage/Core/Controller/Response/Http.php:84
+[3] /var/www/html/magentecna/app/code/core/Mage/Core/Controller/Varien/Front.php:184
+[4] /var/www/html/magentecna/app/code/core/Mage/Core/Model/App.php:365
+[5] /var/www/html/magentecna/app/Mage.php:684
+[6] /var/www/html/magentecna/index.php:80
+\</pre>

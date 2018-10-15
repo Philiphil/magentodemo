@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Sample_Crouter>
+			<version>0.1.0</version>
+		</Sample_Crouter>
+	</modules>
+	<global>
+		<events>
+        	<controller_front_init_routers>
+				<observers>
+					<sample_crouter_init_routers>
+						<class>Sample_Crouter_Controller_Router</class>
+						<method>initControllerRouters</method>
+					</sample_crouter_init_routers>
+				</observers>
+       		 </controller_front_init_routers>
+		</events>
+	</global>
+	<frontend>
+		<routers>
+			<Sample_Crouter>
+				<use>standard</use>
+				<args>
+					<module module="Sample_Crouter">Sample_Crouter</module>
+					<frontName>crouter</frontName>
+				</args>
+			</Sample_Crouter>
+		</routers>
+		<layout>
+			<updates>
+				<sample_crouter>
+					<file>sample_contact.xml</file>
+				</sample_crouter>
+			</updates>
+		</layout>
+	</frontend>
+	<crontab>
+		<jobs>
+			<sample_crouter_birthday_alert>
+				<schedule>
+					<cron_expr>0 * * * *</cron_expr>
+				</schedule>
+				<run>
+					<model>sample_crouter/observer::birthdayAlert</model>
+				</run>
+			</sample_crouter_birthday_alert>
+		</jobs>
+	</crontab>
+</config>

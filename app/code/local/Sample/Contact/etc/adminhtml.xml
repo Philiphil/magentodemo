@@ -1,0 +1,45 @@
+<config>
+    <menu>
+        <Sample_Adminhtml translate="title" module="adminhtml">
+            <title>CLIDER MENU</title>
+            <sort_order>100</sort_order>
+            <children>
+                <Sample_Adminhtml translate="title" module="adminhtml">
+                    <title>CLIDER</title>
+                    <sort_order>0</sort_order>
+                    <action>adminhtml/contact/index</action>
+                </Sample_Adminhtml>
+            </children>
+        </Sample_Adminhtml>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <Sample_Adminhtml translate="title">
+                        <title>CLIDER MENU</title>
+                        <sort_order>100</sort_order>
+                        <children>
+                            <Sample_Adminhtml translate="title">
+                                <title>CLIDER</title>
+                                <sort_order>0</sort_order>
+                            </Sample_Adminhtml>
+                        </children>
+                    </Sample_Adminhtml>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <contact_section>
+                                        <title>truc</title>
+                                        <sort_order>100</sort_order>
+                                    </contact_section>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

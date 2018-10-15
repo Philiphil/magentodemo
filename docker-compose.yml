@@ -1,0 +1,52 @@
+version: '2.0'
+
+services:
+    web:
+        build:
+            context: docker/images/apache2-php5-4
+        volumes:
+            - .:/var/www/html/magentecna
+            - ./docker/apache-php5.6/certs:/etc/ssl/certs
+        links:
+            - mysql
+            - maildev
+        tty: true
+        networks:
+            - traefik
+        labels:
+            - "traefik.frontend.rule=Host:local.magentecna.com"
+
+    maildev:
+        image: djfarrelly/maildev
+        labels:
+            - "traefik.frontend.rule=Host:mail.magentecna.local"
+            - "traefik.port=80"
+        networks:
+            - traefik
+
+    mysql:
+        image: mysql:5.7
+        restart: always
+        environment:
+            - MYSQL_DATABASE=magentecna
+            - MYSQL_ALLOW_EMPTY_PASSWORD=true
+        volumes:
+            - /tmp:/tmp
+            - ./docker/db:/var/lib/mysql
+        networks:
+            - traefik
+        container_name: mysql
+
+    pma:
+        image: phpmyadmin/phpmyadmin
+        links:
+            - mysql:db
+        networks:
+            - traefik
+        labels:
+            - "traefik.frontend.rule=Host:pma.magentecna.local"
+
+networks:
+    traefik:
+        external:
+            name: traefik_webgateway

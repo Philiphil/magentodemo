@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.1.0">
+    <sample_clider_index_index>
+        <reference name="content">
+            <block type="sample_clider/clider" name="clider" template="sample_clider/clider.phtml" />
+        </reference>
+    </sample_clider_index_index>
+        <sample_clider_index_index>
+        <reference name="content">
+            <block type="core/template" name="clider" template="sample_clider/clider.phtml" />
+        </reference>
+    </sample_clider_index_index>
+</layout>

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Sample_Preniumshipment>
+            <module>1.0.0</module>
+        </Sample_Preniumshipment>
+    </modules>
+    <global>
+        <models>
+            <sample_preniumshipment>
+                <class>Sample_Preniumshipment_Model</class>
+            </sample_preniumshipment>
+        </models>
+    </global>
+    <default>
+        <carriers>
+            <sample_preniumshipment>
+                <active>1</active>
+                <model>sample_preniumshipment/carrier</model>
+                <title> Livraison prenium</title>
+                <sallowspecific>0</sallowspecific>
+                <sort_order>30</sort_order>
+            </sample_preniumshipment>
+        </carriers>
+    </default>
+</config>

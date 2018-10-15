@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.1.0">
+    <sample_contact_index_index>
+        <reference name="content">
+            <block type="core/template" name="contact_form" template="contact/form.phtml" />
+        </reference>
+    </sample_contact_index_index>
+    <sample_contact_index_confirm>
+        <reference name="content">
+            <block type="core/template" name="contact_success" template="contact/confirm.phtml" />
+        </reference>
+    </sample_contact_index_confirm>
+</layout>

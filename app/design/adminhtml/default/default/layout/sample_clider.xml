@@ -1,0 +1,9 @@
+<layout version="1.0">
+
+    <adminhtml_contact_index>
+        <reference name="content">
+            <block type="sample_contact/clider" name="monblock" template="sample_clider/afficher.phtml" />
+        </reference>
+    </adminhtml_contact_index>
+
+</layout>
